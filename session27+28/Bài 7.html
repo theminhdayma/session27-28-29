@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function substrings(str) { // Hàm tìm chuỗi con
+            let arr = []; // mảng lưu trữ biến các chuỗi con
+            for (let i = 0; i < str.length; i++) { // Lặp tất cả các kí tự trong chuỗi
+                for (let j = i + 1; j <= str.length; j++) {// Lặp các kí tự kế tiếp để tạo được chuỗi con
+                    arr.push(str.slice(i, j)); 
+                    // Dùng push để thêm vào cuối mảng arr
+                    // Hàm slice để lấy 1 phần của chuỗi
+                }
+            }
+            return arr; // Trả về mảng 
+        }
+        let a = prompt("Nhập vào một chuỗi:");
+        console.log("Chuỗi vừa nhập là: " +a);
+        let result = substrings(a);
+        console.log(result);
+    </script>
+</body>
+</html>

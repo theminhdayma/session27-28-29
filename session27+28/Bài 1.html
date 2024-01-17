@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = [1, -2, 3, 4, -5, 6, 7, -8, 9, -10];
+        let min = number[0];
+        let max = number[0];
+
+        for(let i=0; i<number.length; i++){
+            if(min>number[i]){
+                min = number[i];
+            }
+            if(max<number[i]){
+                max = number[i];
+            }
+        }
+        console.log(`Gía trị lớn nhất là : ` +max);
+        console.log(`Gía trị nhỏ nhất là : ` +min);
+    </script>
+</body>
+</html>

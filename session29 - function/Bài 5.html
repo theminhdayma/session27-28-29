@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkArray(arr, str) {
+            let matchingElements = [];
+            let found = false;
+            
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < str.length; j++) {
+                    if (arr[i].includes(str[j])) { // Kiểm tra xem phần tử arr[i] có chứa ký tự str[j] không
+                        // cơ chế truthy và falsy trong javascript
+                        // giống như kiểu boolean trả về giá trị true hoặc false
+                        matchingElements.push(arr[i]);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (found==false) {
+                console.log("Không có phần tử nào có ký tự giống chuỗi");
+            } else {
+                console.log(matchingElements);
+            }
+        }
+        
+        let arr = ["hfd", "jsuf", "hjwr", "gdl3o", "65247"];
+        let a = prompt("Nhập vào 1 chuỗi ký tự bất kỳ");
+        console.log("Chuỗi vừa nhập là: " +a);
+
+        console.log("Các phần tử trong mảng có chứa chuỗi vừa nhập là: ");
+        checkArray(arr, a);
+    </script>
+</body>
+</html>

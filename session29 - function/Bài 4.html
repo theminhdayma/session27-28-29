@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function characterCheck(str, a){
+            let count = 0;
+            for(let i=0; i<str.length; i++){
+                if(str[i]==a){
+                    count++;
+                }
+            }
+            console.log(count);
+        }
+
+        let str = prompt("Nhập vào 1 chuỗi bất kỳ");
+        console.log("Chuỗi vừa nhập là: " +str);
+        let a = prompt("Nhập vào 1 ký tự bất kỳ");
+
+        console.log(`Số lần xuất hiện của ${a} trong chuỗi là: `);
+        characterCheck(str, a);
+    </script>
+</body>
+</html>
